@@ -956,15 +956,6 @@ form .conf .item span a {
     padding-top: 24px;
 	padding-left: 20px;
 }
-#calc .result:before {
-    content: '';
-    width: 1140px;
-    height: 1px;
-    background: #dfdfdf;
-    position: absolute;
-    left: 20px;
-    top: 0;
-}
 #calc .result .result_summary {
     font-weight: bold;
     margin: 0 0 10px 0;

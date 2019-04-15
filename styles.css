@@ -359,12 +359,12 @@ body {
 }
 
 .hww-features {
-	width: 1125px;
-	justify-content: space-between;
+	width: 100%;
+	justify-content: space-around;
 }
 
 .hww-features_el {
-	max-width: 250px;
+	width: 20%;
 	height: 250px;
 	position: relative;
 	flex-direction: column;
