@@ -3558,9 +3558,9 @@ form .conf .item span{position:relative;}
 
 
 /* Start:/fonts/stylesheet.css?1505407782224*/
-@font-face{font-family:'Rubl';src:url('../../../../../../fonts/ALSRubl.eot');src:url('../../../../../../fonts/ALSRubl.eot@') format('embedded-opentype'),
-url('../../../../../../fonts/ALSRubl.woff') format('woff'),
-url('../../../../../../fonts/ALSRubl.ttf') format('truetype');font-weight:normal;font-style:normal;}
+@font-face{font-family:'Rubl';src:url('../fonts/ALSRubl.eot');src:url('../fonts/ALSRubl.eot@') format('embedded-opentype'),
+url('../fonts/ALSRubl.woff') format('woff'),
+url('../fonts/ALSRubl.ttf') format('truetype');font-weight:normal;font-style:normal;}
 /* End */
 
 
