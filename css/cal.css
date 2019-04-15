@@ -21,14 +21,10 @@
 }
 
 .calculator h2 {
-	font-size: 42px;
-	margin-bottom: 35px;
 	text-align: center;
 }
-.calculator h2 span {
-	display: block;
-	margin-top: 25px;
-	font-size: 15px;
+.calculator p {
+	text-align: center;
 }
 #header {
 	padding-top: 20px;
@@ -723,9 +719,8 @@ form .conf .item span a {
 	line-height: 1.7;
 }
 #calc {
-	padding-top: 44px;
+	padding: 50px;
 	background: #fff;
-	padding-bottom: 44px;
 	color: #48443e;
 }
 #calc .tabs {
