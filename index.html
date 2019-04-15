@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>B2BPACK</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="keyframes.css">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+	$(document).ready(function() {
+  	$(window).scroll(function() {    
+    	var scroll = $(window).scrollTop();
+
+    	if (scroll >= 180) {
+      	$(".nav_fixed").addClass("scrolled");
+    	} else {
+      	$(".nav_fixed").removeClass("scrolled");
+    	}
+  	});
+
+  	$('.menu-list_item').on('click', function(event) {
+			event.preventDefault();
+			let id = $(this).attr('href');
+			let top = $(id).offset().top;
+			$('body,html').animate({scrollTop: top}, 1250);
+		});
+	});
+
+	document.addEventListener('DOMContentLoaded', () => {
+		function callbackBtn(event) {
+			event.preventDefault();
+			document.querySelector('.modal-wrapper').classList.add('open');
+			document.querySelector('.container').classList.add('blur');
+		}
+		function faBackwardBtn() {
+			document.querySelector('.modal-wrapper').classList.remove('open');
+			document.querySelector('.container').classList.remove('blur');
+		}
+		const buttons = document.querySelectorAll('.callbackBtn');
+		for (let button of buttons) {
+			button.addEventListener('click', callbackBtn);
+		}
+		const backwardButtons = document.querySelectorAll('.fa-backward');
+		for (let button of backwardButtons) {
+			button.addEventListener('click', faBackwardBtn);
+		}
+	})
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i&amp;subset=cyrillic" rel="stylesheet">
+	<link href="css/cal.css" type="text/css"   data-template-style="true"  rel="stylesheet" />
+	<script src="js/calc.js"></script>
+	<script src="js/calc-data.js"></script>
+	<script src="js/calc-main.js"></script>
+</head>
+<body>
+	<div class="container flex-container">
+		<header class="header main-block">
+			<div class="header-content content-block flex-container">
+				<div class="header-logo flex-container">
+					<div class="header-logo_icon"></div>
+					<span class="span header-logo_text">b2bpack</span>
+				</div>
+				<div class="header-info flex-container">
+					<div class="header-info-contacts flex-container">
+						<div class="header-info-contacts_mail flex-container">
+							<div class="header-info-contacts_icon header-info-contacts_mail-icon"></div>
+							<div class="header-info-contacts_text">email.test@mail.com</div>
+						</div>
+						<div class="header-info-contacts_phone flex-container">
+							<div class="header-info-contacts_icon header-info-contacts_phone-icon"></div>
+							<div class="header-info-contacts_text">+7 (495) 228-14-88</div>
+						</div>
+					</div>
+					<div class="header-info_callBtn callbackBtn flex-container">
+						<a href="" class="link button header-info_callBtn_text">заказать звонок</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="nav_fixed main-block">
+			<div class="nav_fixed-contacts content-block flex-container">
+						<div class="header-info-contacts_mail flex-container">
+							<div class="header-info-contacts_icon header-info-contacts_mail-icon"></div>
+							<div class="header-info-contacts_text">email.test@mail.com</div>
+						</div>
+						<div class="header-info-contacts_phone flex-container">
+							<div class="header-info-contacts_icon header-info-contacts_phone-icon"></div>
+							<div class="header-info-contacts_text">+7 (495) 228-14-88</div>
+					</div>
+					<div class="header-info_callBtn flex-container">
+						<a href="" class="link button callbackBtn header-info_callBtn_text">заказать звонок</a>
+					</div>
+			</div>
+			<div class="menu-content content-block flex-container">
+				<div class="menu-list flex-container">
+					<a href="" class="link menu-list_item flex-container"><span class="menu-list_item-text">каталог</span></a>
+					<a href="#folio" class="link menu-list_item flex-container"><span class="menu-list_item-text">портфолио</span></a>
+					<a href="#delievery" class="link menu-list_item flex-container"><span class="menu-list_item-text">доставка и оплата</span></a>
+					<a href="#about" class="link menu-list_item flex-container"><span class="menu-list_item-text">о нас</span></a>
+					<a href="#contacts" class="link menu-list_item flex-container"><span class="menu-list_item-text">контакты</span></a>
+				</div>
+			</div>
+		</section>
+		<nav class="menu main-block">
+			<div class="menu-content content-block flex-container">
+				<div class="menu-list flex-container">
+					<a href="" class="link menu-list_item flex-container"><span class="menu-list_item-text">каталог</span></a>
+					<a href="#folio" class="link menu-list_item flex-container"><span class="menu-list_item-text">портфолио</span></a>
+					<a href="#delievery" class="link menu-list_item flex-container"><span class="menu-list_item-text">доставка и оплата</span></a>
+					<a href="#about" class="link menu-list_item flex-container"><span class="menu-list_item-text">о нас</span></a>
+					<a href="#contacts" class="link menu-list_item flex-container"><span class="menu-list_item-text">контакты</span></a>
+				</div>
+			</div>
+		</nav>
+		<section class="intro main-block">
+			<div class="intro-content content-block flex-container">
+				<div class="intro-text flex-container">
+					<h1 class="h1 intro-text_h1">Производство пакетов</h1>
+					<p class="p intro-text_p">полиэтиленовых</p>
+					<p class="p intro-text_p">с нанесением рисунка</p>
+				</div>
+				<a href="" class="link button intro_button callbackBtn">заказать расчет</a>
+			</div>
+		</section>
+		<section class="about main-block">
+			<a id="about" class="link anchor"></a>
+			<div class="about-content content-block flex-container">
+				<div class="about-text">
+					<h2 class="h2 about-text_h2">О нас</h2>
+					<p class="p about-text_p about-text_p_underlined">Официально наша компания начала свою деятельность в 2005 году. Мы работаем на рынке B2B уже более 10 лет и хорошо знаем, что требуется нашему покупателю, являемся надежным поставщиком расходных материалов для бизнеса, а так же производителем пакетов "майка" с логотипом.</p>
+					<h3 class="h3 about-text_h3">Заказывая пакет майку с логотипом Вы получаете:</h3>
+					<p class="p about-text_p">- брендированный пакет - лицо вашей фирмы</p>
+					<p class="p about-text_p">- дополнительный рекламный канал, который повысит узнаваемость</p>
+					<p class="p about-text_p">- пакет с логотипом делается только из первичного и наиболее надежного сырья, он прочен и не имеет запаха</p>
+					<p class="p about-text_p">- надежный пакет - лояльный клиент</p>
+					<p class="p about-text_p">- метод флексопечати обеспечивает наилучшее соотношения цена-качество</p>
+					<p class="p about-text_p">- минимальная цена пакета 1 руб, а пакет отличного качества укладывается в 1,6-2,5 руб</p>
+					<p class="p about-text_p">- поставляем нашу продукцию по всей России</p>
+				</div>
+				<div class="about-info flex-container">
+					<div class="about-info-features flex-container">
+						<div class="about-info-features_feature flex-container">
+							<div class="about-info-features_feature-icon about-info-features_feature-icon_gears"></div>
+							<span class="about-info-features_feature-text">Лучшее оборудование для печати</span>
+						</div>
+						<div class="about-info-features_feature flex-container">
+							<div class="about-info-features_feature-icon about-info-features_feature-icon_leaves"></div>
+							<span class="about-info-features_feature-text">Гарантируем качество выпускаемой продукции</span>
+						</div>
+						<div class="about-info-features_feature flex-container">
+							<div class="about-info-features_feature-icon about-info-features_feature-icon_quality"></div>
+							<span class="about-info-features_feature-text">Высокий уровень обслуживания и сервиса</span>
+						</div>
+						<div class="about-info-features_feature flex-container">
+							<div class="about-info-features_feature-icon about-info-features_feature-icon_graph"></div>
+							<span class="about-info-features_feature-text">Гибкое ценообразование</span>
+						</div>
+					</div>
+					<img src="images/intro-robot-image.png" alt="" class="about-info_image">
+				</div>
+			</div>
+		</section>
+		<section class="hww main-block">
+			<div class="hww-content content-block flex-container">
+				<div class="hww-text">
+					<h2 class="h2 hww-text_h2">как мы работаем</h2>
+					<p class="p hww-text_p">взаимодействие с клиентами</p>
+				</div>
+				<div class="hww-features flex-container">
+					<div class="hww-features_el flex-container">
+						<div class="hww-features_el-icon hww-features_el-icon_callCenter"></div>
+						<span class="hww-features_el-text">получение заявки</span>
+					</div>
+					<div class="hww-features_el flex-container">
+						<div class="hww-features_el-icon hww-features_el-icon_design"></div>
+						<span class="hww-features_el-text">согласование заказа и макета</span>
+					</div>
+					<div class="hww-features_el flex-container">
+						<div class="hww-features_el-icon hww-features_el-icon_payment"></div>
+						<span class="hww-features_el-text">оплата</span>
+					</div>
+					<div class="hww-features_el flex-container">
+						<div class="hww-features_el-icon hww-features_el-icon_delievery"></div>
+						<span class="hww-features_el-text">доставка</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="delievery main-block">
+			<a id="delievery" class="link anchor"></a>
+			<div class="delievery-content content-block flex-container">
+				<div class="delievery-text">
+					<h2 class="h2 delievery-text_h2">доставка и оплата</h2>
+				</div>
+				<div class="delievery-info flex-container">
+					<div class="delievery-info-descr">
+						<p class="p delievery-info-descr_p">Стоимость доставки по Москве - 500 рублей.</p>
+						<p class="p delievery-info-descr_p">Заказы от 30.000 рублей доставляются бесплатно. Доставка за пределы МКАД рассчитывается индивидуально, исходя из расстояния. Свяжитесь с нашим менеджером для уточнения стоимости доставки.</p>
+						<p class="p delievery-info-descr_p">Доставка по России осуществляется транспортной компанией на ваш выбор. Используйте наш <a href="calculator" class="link anchor delievery-info-descr_link_highlited">калькулятор</a> для рассчета веса и объема вашего заказа.</p>
+					</div>
+					<img src="images/delievery-man.jpg" alt="" class="delievery-info_image">
+				</div>
+			</div>
+		</section>
+
+
+		<section class="calculator main-block">
+			<div id="calc" class="content-block">
+				<div class="container">
+					<div class="padding-block">
+						<h2>Онлайн - калькулятор стоимости пакетов
+							<span>Рассчитайте за 30 секунд стоимость Вашей партии пакетов</span>
+						</h2>
+						<div class="tabs">
+							<!-- <h3>1. Тип пакета: <b class="type">Пакет “Майка”</b></h3>
+							<ul class="btns">
+													<li class="maika" data-type="Пакет “Майка”">
+									<a href="/">
+										<span><span>Пакет “Майка”</span><br>Флексография</span>
+										<div class="img">
+											<img src="img/c-1.svg" alt="">
+											<img class="c-hover" src="img/c-1h.svg" alt="">
+											<span>Стоимость:<br>0,5 - 11 руб/шт<br><br>Тираж:<br>от 1 000 шт.</span>
+										</div>
+									</a>
+								</li>
+														
+																	</ul>
+							<h3>2. Параметры</h3> -->
+							<div id="c-1">
+								<div class="img-big"><div class="img-big__wrapper img-big__wrapper-1"><img src="img/c-1-big.png" alt="" data-rjs="2"><div class="img-big__wrapper-text">Ваш логотип</div></div></div>
+								<div class="text">
+									<h4>Расчет стоимости изготовления полиэтиленовых пакетов «Майка» с флексопечатью</h4>
+									<ul>
+										<li><b>Метод печати:</b> флексопечать</li>
+										<li><b>Тип:</b> пакет «Майка»</li>
+										<li><b>Материал:</b> полиэтилен высокого, низкого и среднего давления (ПВД, ПНД, ПСД)</li>
+										<li><b>Допустимые тиражи:</b> от 1000 штук</li>
+										<li><b>Срок изготовления:</b> от 10 до 25 рабочих дней</li>
+									</ul>
+									<p><i>Цены приведены в рублях с учетом НДС. Актуальны на <span class="today"></span></i></p>
+								</div>
+								<div class="clr"></div>
+								<div class="calc">
+									<div class="dev-block" style="display:none;"></div>
+									<table>
+										<tr>
+											<td>
+												<b>Тираж</b>
+												<div class="info">
+													<div class="content">
+														– с печатью в 1 – 2 цвета – тираж от 1 000 шт.
+														<br>– с печатью в 3 – 4 цвета – тираж от 20 000 шт.
+														<br>– с полноцветной печатью (пример: печать фотографии на пакете) – тираж
+														<br>от 100 000 шт.
+													</div>
+												</div>
+											</td>
+											<td>
+												<select class="c-copies">
+													<option value="1">1 000</option>
+													<option value="2">2 000</option>
+													<option value="3">3 000</option>
+													<option value="5">5 000</option>
+													<option selected value="10">10 000</option>
+													<option value="20">20 000</option>
+													<option value="30">30 000</option>
+													<option value="40">40 000</option>
+													<option value="50">50 000</option>
+																							</select> шт.
+											</td>
+										</tr>
+										<tr class="not-kengo">
+											<td>
+												<b>Ширина</b>
+												<div class="info">
+													<div class="content">
+														Стандартные размеры
+														<br>
+														<br>
+																										<img src="img/sz-1.png" alt="" data-rjs="2">
+																									</div>
+												</div>
+											</td>
+											<td>
+												<select class="c-width">
+																								<option value="24">24</option>
+													<option value="25">25</option>
+													<option value="28">28</option>
+													<option value="30">30</option>
+													<option value="32">32</option>
+													<option value="35">35</option>
+													<option value="36">36</option>
+													<option value="38">38</option>
+													<option value="39">39</option>
+													<option value="40">40</option>
+													<option value="42">42</option>
+													<option selected value="43">43</option>
+												</select> см. <span class="c-select-tip">+ фальцы (f): два по <span class="c-falci">7.5</span> см.</span>
+											</td>
+										</tr>
+										<tr class="not-kengo">
+											<td>
+												<b>Высота</b>
+												<div class="info">
+													<div class="content">
+														Стандартные размеры
+														<br>
+														<br>
+														<img src="img/sz-1.png" alt="" data-rjs="2">
+													</div>
+												</div>
+											</td>
+											<td>
+												<select class="c-height">
+																								<option value="45">45</option>
+													<option value="50">50</option>
+													<option value="55">55</option>
+													<option value="60">60</option>
+													<option value="70">70</option>
+													<option selected value="75">75</option>
+												</select> см.
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<b>Материал</b>
+												<div class="info">
+													<div class="content">
+														<b>ПНД (полиэтилен низкого давления) -</b>
+														<br>матовый, шуршащий, прочный
+													</div>
+												</div>
+											</td>
+											<td>
+												<select class="c-material" disabled>
+													<option selected value="pnd">полиэтилен низкого давления (ПНД)</option>
+												</select>
+											</td>
+										</tr>
+										<tr class="kengo">
+											<td>
+												<b>Размер</b>
+												<div class="info">
+													<div class="content">
+														Стандартные размеры
+														<br>
+														<br>
+														<img src="img/sz-1.png" alt="" data-rjs="2">
+													</div>
+												</div>
+											</td>
+											<td>
+												<select class="c-dimension">
+													<option selected value="22x35" class="d16 с1-dis">22 х 35</option>
+													<option value="25x45" class="d16 d18 d20">25 х 45</option>
+													<option value="28x50" class="d16 d18 d20 d22 d25">28 х 50</option>
+													<option value="30x55" class="d16 d18 d20 d22 d25 d30">30 х 55</option>
+													<option value="32x55" class="d18 d20 d22 d25 d30">32 х 55</option>
+													<option value="30x60" class="d18 d20 d22 d25 d30">30 х 60</option>
+													<option value="35x60" class="d18 d20 d22 d25 d30">35 х 60</option>
+													<option value="39x60" class="d20 d22 d25 d30">39 х 60</option>
+													<option value="39x70" class="d20 d22 d25 d30">39 х 70</option>
+													<option value="43x70" class="d25 d30">43 х 70</option>
+												</select> см.
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<b>Толщина (плотность)</b>
+												<div class="info">
+													<div class="content">
+													Грузоподъемность пакета майка:
+													<br>12 микрон – <span class="top-m-12 top-m-pnd">2</span> кг
+													<br>13 микрон – <span class="top-m-13 top-m-pnd">2,5</span> кг
+													<br>14 микрон – <span class="top-m-14 top-m-pnd">3</span> кг
+													<br>15 микрон – <span class="top-m-15 top-m-pnd">4</span> кг
+													<br>16 микрон – <span class="top-m-16 top-m-pnd">5</span> кг
+													<br>17 микрон – <span class="top-m-17 top-m-pnd">6</span> кг
+													<br>18 микрон – <span class="top-m-18 top-m-pnd">7</span> кг
+													<br>19 микрон – <span class="top-m-19 top-m-pnd">8</span> кг
+													<br>20 микрон – <span class="top-m-20 top-m-pnd">9</span> кг
+													<br>21 микрон – <span class="top-m-21 top-m-pnd">9,5</span> кг
+													<br>22 микрона – <span class="top-m-22 top-m-pnd">10</span> кг
+													<br>23 микрона – <span class="top-m-23 top-m-pnd">11</span> кг
+													<br>24 микрона – <span class="top-m-24 top-m-pnd">11,5</span> кг
+													<br>25 микрон – <span class="top-m-25 top-m-pnd">12</span> кг
+													<br>30 микрон – <span class="top-m-30 top-m-pnd">15</span> кг
+													<br>35 микрон – <span class="top-m-35 top-m-pnd">25</span> кг
+													</div>
+												</div>
+											</td>
+											<td>
+												<select class="c-density">
+													<option class="op-not-kengo copy-not-10-20-30" value="12">12</option>
+													<option class="op-not-kengo" value="13" selected>13</option>
+													<option class="op-not-kengo" value="14">14</option>
+													<option class="op-not-kengo" value="15">15</option>
+													<option class="d22x35 d25x45 d28x50 d30x55" value="16">16</option>
+													<option class="op-not-kengo" value="17">17</option>
+													<option class="d25x45 d28x50 d30x55 d32x55 d30x60 d35x60" value="18">18</option>
+													<option class="op-not-kengo" value="19">19</option>
+													<option class="d25x45 d28x50 d30x55 d32x55 d30x60 d35x60 d39x60 d39x70" value="20">20</option>
+													<option class="op-not-kengo" value="21">21</option>
+													<option class="d28x50 d30x55 d32x55 d35x60 d30x60 d39x60 d39x70" value="22">22</option>
+													<option class="op-not-kengo" value="23">23</option>
+													<option class="op-not-kengo" value="24">24</option>
+													<option class="d28x50 d30x55 d32x55 d30x60 d35x60 d39x60 d39x70 d43x70" value="25">25</option>
+													<option class="d30x55 d32x55 d30x60 d35x60 d39x60 d39x70 d43x70" value="30">30</option>
+													<option class="op-not-kengo" value="35">35</option>
+												</select> микрон; <span class="c-select-tip">Выдерживает вес <span class="m-max-weight">3</span> кг</span>
+											</td>
+										</tr>
+																		<tr>
+											<td>
+												<b>Цвет полиэтилена</b>
+												<div class="info">
+													<div class="content">
+														– белый, прозрачный - наценка +0% стоимости пакета
+														<br>- cеребряный, золотой - наценка +20% к стоимости пакета
+														<br>– другие цвета - наценка +15% к стоимости пакета
+														<br>Цветной и прозрачный полиэтилен от 3 000 штук
+														<br>Краситель содержится в составе
+														<br>материала и не окрашивает руки
+													</div>
+												</div>
+											</td>
+											<td>
+												<select class="c-colored-list">
+													<option class="color-option co-1" value="1">белый</option>
+													<option class="color-option co-2" value="2">розовый</option>
+													<option class="color-option co-3" value="3">голубой</option>
+													<option class="color-option co-4" value="4">прозрачный</option>
+													<option class="color-option co-5" value="5">оранжевый</option>
+													<option class="color-option co-6" value="6">бирюзовый</option>
+													<option class="color-option co-7" value="7">черный</option>
+													<option class="color-option co-8" value="8">бежевый</option>
+													<option class="color-option co-9" value="9">синий</option>
+													<option class="color-option co-10" value="10">красный</option>
+													<option class="color-option co-11" value="11">желтый</option>
+													<option class="color-option co-12" value="12">серебряный</option>
+													<option class="color-option co-13" value="13">вишневый</option>
+													<option class="color-option co-14" value="14">зеленый</option>
+													<option class="color-option co-15" value="15">золотой</option>
+												</select>
+												<div class="c-color-error__wrapper hidden" id="error-1">
+													<div class="c-color-error">Черный и темно-синий полиэтилен от 10 000 шт.;
+														остальные
+														цвета от 20 000 шт.
+													</div>
+												</div>
+											</td>
+										</tr>
+																		<tr>
+											<td>
+												<b>Сделать пакет биоразлагаемым</b>
+												<div class="info">
+													<div class="content">
+														<div style="width: 345px;">
+															Наценка +10 – 15% к стоимости пакета
+															<br>Биоразлагаемые пакеты быстро разлагаются
+															<br>и исчезают бесследно, (от 1,5 до 3 лет)
+															<br>не загрязняя окружающую среду и положительно
+															<br>влияют на имидж компании
+														</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<input class="c-bio" type="checkbox">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<b>Кол-во цветов печати</b>
+												<div class="info">
+													<div class="content">
+														– с печатью в 1 – 2 цвета – тираж от 1 000 шт.
+														<br>– с печатью в 3 – 4 цвета – тираж от 20 000 шт.
+														<br>– с полноцветной печатью (пример: печать фотографии на пакете) – тираж
+														<br>от 100 000 шт.
+													</div>
+												</div>
+											</td>
+											<td>
+												<select class="c-facecolors">
+													<option class="" value="0" selected>0</option>
+													<option class="" value="1">1</option>
+													<option class="" value="2">2</option>
+													<option class="op-not-kengo op-not-kengo-20" value="3">3</option>
+													<option class="op-not-kengo op-not-kengo-20" value="4">4</option>
+												</select> <span>на лице</span>
+												<select class="c-backcolors">
+													<option class="" value="0" selected>0</option>
+													<option class="" value="1">1</option>
+													<option class="" value="2">2</option>
+													<option class="op-not-kengo op-not-kengo-20" value="3">3</option>
+													<option class=" op-not-kengo op-not-kengo-20" value="4">4</option>
+												</select> <span>на обороте</span>
+												<div class="c-color-error__wrapper hidden" id="error-3">
+													<div class="c-color-error">Печать суммарно с двух сторон больше 4 цветов или
+														полноцветная печать от 100 000 шт.
+													</div>
+												</div>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div class="result">
+									<div class="result_summary">Итого:</div>
+									<div class="result_summary_wrap">
+										<table>
+											<tr>
+												<td>Стоимость за пакет (1 шт.)</td>
+												<td><span class="c-packet_price_html">1,47<span class="rub"> i</span></span> <span class="result-error hidden"
+																												id="error-4">Чтобы заказать более 4 цветов печати с двух сторон минимальный тираж должен быть не менее 100 000 шт.</span>
+												</td>
+											</tr>
+											<tr>
+												<td>Масса пакета (1 шт.)</td>
+												<td><span class="c-packet_massa">7,70</span> г</td>
+											</tr>
+											<tr>
+												<td>Масса всего тиража</td>
+												<td><span class="c-full_massa">384,75</span> кг <span class="result-error hidden"
+																									  id="error-2">Минимальный вес партии должен быть не менее 100 кг.</span>
+												</td>
+											</tr>
+											<tr class="big">
+												<td>Стоимость всего тиража</td>
+												<td><span class="c-total_price_html">73 500<span class="rub"> i</span></span><span class="mobile-error" 
+														style="position:relative;"><span class="result-error-2 hidden"
+																						 id="error-5"></span></span></td>
+											</tr>
+										</table>
+										<!-- <div class="res-data">
+											<b>Доставка:</b> в стоимость не включена доставка и изготовление флексоформ<div class="c-tip-wrapper">
+												<div class="info">
+													<div class="content">
+														Стоимость за доставку и изготовление флексоформ индивидуальна. Стоимость озвучивает менеджер
+													</div>
+												</div>
+											</div><br>
+											<b>Сроки изготовления:</b> от 10 до 25 рабочих дней
+										</div> -->
+									</div>
+									<!-- <a href="index.html#popup-10-1" class="btn fancybox"
+									   data-goal="g21"><span>Отправить заказ менеджеру</span></a>
+									<p>или <a href="index.html#popup-11-1" class="link dotted fancybox" data-goal="g23">сохранить расчёт и
+											отправить себе на почту</a></p> -->
+								</div>
+							</div>
+						</div>
+						<div class="calc-text"></div>
+						<div class="calc-text-clear" style="display:none"></div>
+						
+					</div>
+				</div>
+			</div>
+	
+		</section>
+
+
+
+		<section class="folio main-block">
+			<a id="folio" class="link anchor"></a>
+			<div class="folio-content content-block flex-container">
+				<div class="folio-text">
+					<h2 class="h2 folio-text_h2">портфолио</h2>
+					<p class="p folio-text_p">примеры наших работ</p>
+				</div>
+				<div class="folio-images flex-container">
+					<img src="images/folio-image1.jpg" alt="" class="folio-images_image">
+					<img src="images/folio-image2.jpg" alt="" class="folio-images_image">
+					<img src="images/folio-image3.jpg" alt="" class="folio-images_image">
+					<img src="images/folio-image4.jpg" alt="" class="folio-images_image">
+				</div>
+			</div>
+		</section>
+		<section class="contacts main-block">
+			<a id=contacts class="link anchor"></a>
+			<div class="contacts-content content-block flex-container">
+				<div class="contacts-text">
+					<h2 class="h2 contacts-text_h2">контакты</h2>
+					<p class="p contacts-text_p">свяжитесь с нами</p>
+				</div>
+				<div class="contacts-info flex-container">
+					<div class="contacts-info-col flex-container">
+						<div class="contacts-info-col_el contacts-info-col_el_margin flex-container">
+							<div class="contacts-info-col_el-icon contacts-info-col_el-icon_phone"></div>
+							<span class="contacts-info-col_el-text">+7 (495) 228-14-88</span>
+						</div>
+						<div class="contacts-info-col_el flex-container">
+							<div class="contacts-info-col_el-icon contacts-info-col_el-icon_mail"></div>
+							<span class="contacts-info-col_el-text">test-email@mail.com</span>
+						</div>
+					</div>
+					<div class="contacts-info-col flex-container">
+						<div class="contacts-info-col_el contacts-info-col_el_margin flex-container">
+							<div class="contacts-info-col_el-icon contacts-info-col_el-icon_wh"></div>
+							<span class="contacts-info-col_el-text">Время работы: 9:00-18:00, без выходных</span>
+						</div>
+						<div class="contacts-info-col_el flex-container">
+							<div class="contacts-info-col_el-icon contacts-info-col_el-icon_location"></div>
+							<span class="contacts-info-col_el-text">МО, Одинцово, ул. Ново-Спротивная, д.24</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A263dc93138ea6e089401f7c6d5049edbb513dda2aa9dd42ec33287430f4fb660&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+		</section>
+		<footer class="footer main-block">Все права защищены ©2019</footer>
+	</div>
+	<div class="modal-wrapper flex-container">
+		<div class="modal flex-container">
+			<div class="modal_fa-backward fa fa-backward"></div>
+			<div class="modal-text">
+				<h3 class="h3 modal_h3">Мы вам перезвоним</h3>
+				<p class="p modal_p">просто оставьте ваши контакты</p>
+			</div>
+			<form action="" class="modal-form flex-container">
+				<input type="text" class="modal-form_input" placeholder="Имя">
+				<input type="text" class="modal-form_input" placeholder="Телефон">
+				<input type="text" class="modal-form_input" placeholder="Электронная почта">
+			</form>
+			<button class="button modal_button" type="submit">отправить</button>
+		</div>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/retina.js/2.1.2/retina.min.js"></script>
+	    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tabslet.js/1.7.3/jquery.tabslet.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.0.2/jquery.plugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.0.2/jquery.countdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/9.1.4/js/smooth-scroll.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/df-number-format/2.1.3/jquery.number.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.min.js"></script>
+		<script src="js/calc-data.js"></script>
+	<script src="js/calc-main.js"></script>
+		<script src="js/calc.js"></script>
+</body>
+</html>

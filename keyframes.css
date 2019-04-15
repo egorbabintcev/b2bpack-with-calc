@@ -1,0 +1,63 @@
+@keyframes menu-scroll {
+	from {
+		opacity: 0;
+		box-shadow: 0;
+	}
+	to {
+		opacity: 1;
+		box-shadow:0px 4px 5px 0px rgba(0,0,0,0.6);
+		-webkit-box-shadow:0px 4px 5px 0px rgba(0,0,0,0.6);
+		-moz-box-shadow:0px 4px 5px 0px rgba(0,0,0,0.6);
+	}
+}
+
+@keyframes menu-item-hover {
+	from {
+		opacity: 0.8;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes button-hover {
+	from {
+		box-shadow: 0;
+	}
+	to {
+		-webkit-box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.7);
+		-moz-box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.7);
+		box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.7);
+	}
+}
+
+@keyframes modal-button-hover {
+	from {
+		color: #48443e;
+	}
+	to {
+		background-color: #48443d;
+		color: #fff;
+	}
+}
+
+@keyframes phone-icon-hover {
+	from {
+		transform: rotate(0);
+	}
+	20% {
+		transform: rotate(25deg);
+	}
+	40% {
+		transform: rotate(-25deg);
+	}
+	60% {
+	 	transform: rotate(25deg);
+	}
+	80% {
+		transform: rotate(-25deg);
+	}
+	to {
+	 	transform: rotate(0);
+	}
+}
