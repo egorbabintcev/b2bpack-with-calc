@@ -33,8 +33,16 @@
 			event.preventDefault();
 			document.querySelector('.modal-wrapper').classList.add('open');
 			document.querySelector('.container').classList.add('blur');
+			const textarea = document.querySelector(".modal-form_textarea");
+			const descr = document.querySelector('.modal_p');
+			if (this.classList.contains('orderBtn')) {
+				textarea.classList.remove('hidden');
+				descr.innerText = 'просто оставьте ваши контакты и пожелания'
+			}
 		}
 		function faBackwardBtn() {
+			document.querySelector('.modal-form_textarea').classList.add('hidden');
+			document.querySelector('.modal_p').innerText = 'просто оставьте ваши контакты';
 			document.querySelector('.modal-wrapper').classList.remove('open');
 			document.querySelector('.container').classList.remove('blur');
 		}
@@ -121,7 +129,7 @@
 					<p class="p intro-text_p">полиэтиленовых</p>
 					<p class="p intro-text_p">с нанесением рисунка</p>
 				</div>
-				<a href="" class="link button intro_button callbackBtn">заказать расчет</a>
+				<a href="" class="link button intro_button callbackBtn orderBtn">сделать заказ</a>
 			</div>
 		</section>
 		<section class="about main-block">
@@ -613,7 +621,7 @@
 	</div>
 	<div class="modal-wrapper flex-container">
 		<div class="modal flex-container">
-			<div class="modal_fa-backward fa fa-backward"></div>
+			<i class="modal_fa-backward fa fa-backward"></i>
 			<div class="modal-text">
 				<h3 class="h3 modal_h3">Мы вам перезвоним</h3>
 				<p class="p modal_p">просто оставьте ваши контакты</p>
@@ -622,6 +630,7 @@
 				<input type="text" class="modal-form_input" placeholder="Имя">
 				<input type="text" class="modal-form_input" placeholder="Телефон">
 				<input type="text" class="modal-form_input" placeholder="Электронная почта">
+				<textarea class="modal-form_textarea hidden" placeholder="Сообщение"></textarea>
 			</form>
 			<button class="button modal_button" type="submit">отправить</button>
 		</div>
