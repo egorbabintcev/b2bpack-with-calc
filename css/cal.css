@@ -3184,7 +3184,7 @@ form .top .item input[name="phone3"]{width:145px;text-align:center;padding:0;}
 
 
 }
-@media (max-width:960px){h1,h2{font-size:36px!important;}
+@media (max-width:960px){
 #header .nav{-webkit-column-count:2;-moz-column-count:2;column-count:2;width:320px;}
 #first .img{width:215px;}
 #first .left p br{display:none;}

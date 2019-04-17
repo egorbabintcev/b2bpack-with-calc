@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>B2BPACK</title>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="styles.css">
@@ -41,8 +42,10 @@
 			}
 		}
 		function faBackwardBtn() {
-			document.querySelector('.modal-form_textarea').classList.add('hidden');
-			document.querySelector('.modal_p').innerText = 'просто оставьте ваши контакты';
+			setTimeout(() => {
+				document.querySelector('.modal-form_textarea').classList.add('hidden');
+				document.querySelector('.modal_p').innerText = 'просто оставьте ваши контакты';
+			}, 500);
 			document.querySelector('.modal-wrapper').classList.remove('open');
 			document.querySelector('.container').classList.remove('blur');
 		}
@@ -78,7 +81,7 @@
 						</div>
 						<div class="header-info-contacts_phone flex-container">
 							<div class="header-info-contacts_icon header-info-contacts_phone-icon"></div>
-							<div class="header-info-contacts_text">+7 (495) 228-14-88</div>
+							<div class="header-info-contacts_text">+7 (499) 398-47-04</div>
 						</div>
 					</div>
 					<div class="header-info_callBtn callbackBtn flex-container">
@@ -596,7 +599,7 @@
 					<div class="contacts-info-col flex-container">
 						<div class="contacts-info-col_el contacts-info-col_el_margin flex-container">
 							<div class="contacts-info-col_el-icon contacts-info-col_el-icon_phone"></div>
-							<span class="contacts-info-col_el-text">+7 (495) 228-14-88</span>
+							<span class="contacts-info-col_el-text">+7 (499) 398-47-04</span>
 						</div>
 						<div class="contacts-info-col_el flex-container">
 							<div class="contacts-info-col_el-icon contacts-info-col_el-icon_mail"></div>
@@ -610,7 +613,7 @@
 						</div>
 						<div class="contacts-info-col_el flex-container">
 							<div class="contacts-info-col_el-icon contacts-info-col_el-icon_location"></div>
-							<span class="contacts-info-col_el-text">МО, Одинцово, ул. Ново-Спротивная, д.24</span>
+							<span class="contacts-info-col_el-text">МО, Одинцово, ул. Ново-Спротивная, д.26</span>
 						</div>
 					</div>
 				</div>
